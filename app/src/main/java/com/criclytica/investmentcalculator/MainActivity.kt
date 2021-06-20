@@ -2,6 +2,9 @@ package com.criclytica.investmentcalculator
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import android.widget.EditText
 
 class MainActivity : AppCompatActivity() {
 
@@ -12,7 +15,11 @@ class MainActivity : AppCompatActivity() {
     var etRet: EditText? = null;
 
     fun calcReturns() {
-        Log.i("IC", "App runs successfully")
+        var currAge: String = etAge.text.toString()
+        var retAge: String = etAgeRet.text.toString()
+        var sipAmt: String = etSIP.text.toString()
+        var inflation: String = etSIP.text.toString()
+        var annRet: String = etRet.text.toString()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
