@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
+import kotlin.math.pow
 
 class MainActivity : AppCompatActivity() {
 
@@ -13,13 +15,21 @@ class MainActivity : AppCompatActivity() {
     var etSIP: EditText? = null;
     var etInf: EditText? = null;
     var etRet: EditText? = null;
+    var tvTotAmt: TextView? = null;
 
     fun calcReturns() {
-        var currAge: String = etAge.text.toString()
-        var retAge: String = etAgeRet.text.toString()
-        var sipAmt: String = etSIP.text.toString()
-        var inflation: String = etSIP.text.toString()
-        var annRet: String = etRet.text.toString()
+        var currAge: Int = etAge?.text.toString().toInt()
+        var retAge: Int = etAgeRet?.text.toString().toInt()
+        var sipAmt: Int = etSIP?.text.toString().toInt()
+        var inflation: Int = etSIP?.text.toString().toInt()
+        var annRet: Int = etRet?.text.toString().toInt()
+
+        var numYears: Int = retAge - currAge
+        var rate: Double = annRet.toDouble()/1200
+        var totAmt: String =  (sipAmt * ((1 + rate).pow(numYears.toDouble()) - 1)* (1+rate)).toString()
+
+        tvTotAmt?.setText(totAmt)
+
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +42,7 @@ class MainActivity : AppCompatActivity() {
         etSIP = findViewById(R.id.etSIP)
         etInf = findViewById(R.id.etInf)
         etRet = findViewById(R.id.etRet)
+        tvTotAmt = findViewById(R.id.tvTotAmt)
 
     }
 }
