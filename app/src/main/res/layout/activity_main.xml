@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/shape"
-    android:padding="2sp"
+
     tools:context=".MainActivity">
 
     <TextView
@@ -27,15 +27,15 @@
 
     <EditText
         android:id="@+id/etRet"
-        android:background="@drawable/shape"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="42dp"
         android:layout_marginBottom="416dp"
+        android:background="@drawable/shape"
         android:ems="10"
         android:fontFamily="serif-monospace"
         android:inputType="number"
-        android:padding="2sp"
+
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -63,15 +63,15 @@
 
     <EditText
         android:id="@+id/etInf"
-        android:background="@drawable/shape"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="42dp"
         android:layout_marginBottom="29dp"
+        android:background="@drawable/shape"
         android:ems="10"
         android:fontFamily="serif-monospace"
         android:inputType="number"
-        android:padding="2sp"
+
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -99,15 +99,15 @@
 
     <EditText
         android:id="@+id/etSIP"
-        android:background="@drawable/shape"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="42dp"
         android:layout_marginBottom="34dp"
+        android:background="@drawable/shape"
         android:ems="10"
         android:fontFamily="serif-monospace"
         android:inputType="number"
-        android:padding="2sp"
+
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -135,15 +135,14 @@
 
     <EditText
         android:id="@+id/etAgeRet"
-        android:background="@drawable/shape"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="42dp"
         android:layout_marginBottom="32dp"
+        android:background="@drawable/shape"
         android:ems="10"
         android:fontFamily="serif-monospace"
         android:inputType="number"
-        android:padding="2sp"
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -171,17 +170,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:background="@drawable/shape"
         android:id="@+id/etAge"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="42dp"
         android:layout_marginBottom="35dp"
+        android:background="@drawable/shape"
         android:ems="10"
         android:fontFamily="serif-monospace"
         android:inputType="number"
-        android:padding="2sp"
+
         android:textAlignment="center"
         android:textSize="14sp"
         android:textStyle="bold"
@@ -235,12 +234,12 @@
 
     <TextView
         android:id="@+id/tvTotAmt"
-        android:background="@drawable/shape"
         android:layout_width="181dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/shape"
         android:gravity="center"
         android:textAlignment="center"
         android:textSize="15sp"
@@ -267,12 +266,12 @@
 
     <TextView
         android:id="@+id/tvInfAmt"
-        android:background="@drawable/shape"
         android:layout_width="181dp"
         android:layout_height="46dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/shape"
         android:gravity="center"
         android:textAlignment="center"
         android:textSize="15sp"

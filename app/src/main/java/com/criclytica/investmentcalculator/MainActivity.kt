@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import java.text.DecimalFormat
 import kotlin.math.pow
 
 class MainActivity : AppCompatActivity() {
@@ -31,19 +32,20 @@ class MainActivity : AppCompatActivity() {
         tvTotAmt = findViewById(R.id.tvTotAmt)
 
         btnCalc.setOnClickListener(View.OnClickListener {
-            var currAge: Int = etAge?.text.toString().toInt()
-            var retAge: Int = etAgeRet?.text.toString().toInt()
-            var sipAmt: Int = etSIP?.text.toString().toInt()
-            var inflation: Int = etSIP?.text.toString().toInt()
-            var annRet: Int = etRet?.text.toString().toInt()
+            val currAge: Int = etAge?.text.toString().toInt()
+            val retAge: Int = etAgeRet?.text.toString().toInt()
+            val sipAmt: Int = etSIP?.text.toString().toInt()
+            val inflation: Int = etSIP?.text.toString().toInt()
+            val annRet: Int = etRet?.text.toString().toInt()
 
-            var numYears: Int = retAge - currAge
-            var rate: Double = annRet.toDouble()/1200
-            var totAmt: String =  (sipAmt * ((1 + rate).pow(numYears.toDouble()) - 1)* (1+rate)).toString()
+            val numMonths: Int = (retAge - currAge)*12
+            val rate: Double = annRet.toDouble()/1200
+            val totAmt: Double =  (sipAmt * ((1 + rate).pow(numMonths.toDouble()) - 1)/rate * (1+rate))
 
-            tvTotAmt?.setText(totAmt)
+            val dec = DecimalFormat("#,##,##,###")
 
-            Log.i("IC", "Function successful")
+            tvTotAmt?.setText("Rs. $dec.format(totAmt)")
+            Log.i("IC", "Total Amount == $totAmt")
         })
 
     }
